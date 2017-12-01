@@ -1,0 +1,11 @@
+.userEconomicsTable h4{
+    text-align: center;
+}
+.userEconomicsTable .top-name{
+    margin:10px 0;
+    font-size: 16px;
+}
+.userEconomicsTable .top-name>span{
+    display: inline-block;
+    padding-right:80px;
+}

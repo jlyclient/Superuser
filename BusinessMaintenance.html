@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/BusinessMaintenance.css">
+</head>
+<body>
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+    <!--<div class="container-fluid">-->
+        <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+        <!--<div class="navbar-header">-->
+            <!--<a class="navbar-brand" href="#">副省级城市经济金融共享信息系统</a>-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li class="active"><a href="#">信息联络员管理 </a></li>-->
+                <!--&lt;!&ndash; 将这个li 标签删除 就不会出现 &ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="./StatisticalIndicators.html">统计指标管理</a></li>&ndash;&gt;-->
+
+                <!--<li><a href="./CityManagement.html">城市管理</a></li>-->
+                <!--<li><a href="#">公告管理</a></li>-->
+                <!--<li><a href="#">统计报表格式管理</a></li>-->
+                <!--<li><a href="./BusinessDataquery.html">数据查询</a></li>-->
+            <!--</ul>-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="#">修改密码</a></li>-->
+                <!--<li><a href="#">退出</a></li>-->
+            <!--</ul>-->
+
+        <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+
+    <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+<!--</nav>-->
+
+
+
+
+<div class="header">
+    <div class="headerInner">
+        <ul class="left">
+            <li><a class="indexTab" href="#">副省级城市经济金融共享信息系统</a></li>
+        </ul>
+        <ul class="left headercenter">
+            <li class="active"><a href="./BusinessMaintenance.html">信息联络员管理</a></li>
+            <!-- 将这个li 标签删除 就不会出现 -->
+            <li><a href="./StatisticalIndicators.html">统计报表管理</a></li>
+
+            <li><a href="./CityManagement.html">城市管理</a></li>
+            <li><a href="./Notice.html">公告管理</a></li>
+            <!--<li><a href="./StatisticalTable.html">统计报表格式管理</a></li>-->
+            <li><a href="./BusinessDataquery.html">数据查询</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+        <p class="clear"></p>
+    </div>
+</div>
+
+
+
+
+
+    <div class="InnerBox BusinessMaintenance">
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#breakfast" aria-controls="breakfast" role="tab" data-toggle="tab">用户管理</a></li>
+                <li role="presentation"><a href="#lunch" aria-controls="lunch" role="tab" data-toggle="tab">权限管理</a></li>
+                <li role="presentation"><a href="#dinner" aria-controls="dinner" role="tab" data-toggle="tab">授权管理</a></li>
+            </ul>
+            <p class="clear"></p>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="breakfast">
+                    <p class="BusinessAdd">添加用户</p>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>序号</th>
+                            <th>所在城市</th>
+                            <th>姓名</th>
+                            <th>所在部门</th>
+                            <th>职务</th>
+                            <th>电话</th>
+                            <th>手机号</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>成都</td>
+                            <td>张三</td>
+                            <td>科技部</td>
+                            <td>科长</td>
+                            <td>8654333</td>
+                            <td>13486542332</td>
+                            <td>
+                                <span class="BusinessDel" onclick="BusinessEdit('obj')">编辑</span>
+                                <span  class="BusinessDel" onclick="BusinessDel('1','user')">删除</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="lunch">
+                    <p class="addpower">增加</p>
+                    <p class="addpower-input">
+                        <input type="text"> <span id="sure-addpower">确认</span> <span id="del-adpower">取消</span>
+                    </p>
+                    <table class="table table-bordered" style="width:300px">
+                        <tr>
+                            <td>用户管理</td>
+                            <td>
+                                <span class="BusinessDel" onclick="JurisdictionEdit('1','用户管理')">编辑</span>
+                                <span class="BusinessDel" onclick="BusinessDel('1','power')">删除</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="dinner">
+                    <div class="authorize">
+                        <span>
+                            <input type="checkbox" value="信息1"> 信息1
+                        </span>
+                        <span>
+                            <input type="checkbox" value="信息2"> 信息2
+                        </span>
+                        <span>
+                            <input type="checkbox" value="信息3"> 信息3
+                        </span>
+                        <span>
+                            <input type="checkbox" value="信息4"> 信息4
+                        </span>
+                        <span>
+                            <input type="checkbox" value="信息5"> 信息5
+                        </span>
+                        <span>
+                            <input type="checkbox" value="信息6"> 信息6
+                        </span>
+                        <span>
+                            <input type="checkbox" value="信息7"> 信息7
+                        </span>
+                        <p>
+                            <span class="sure-authorize">确定</span><span class="cancle-authorize">取消</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="Alert addAlert">
+    <div class="AlertShaw"></div>
+    <div class="addBox">
+        <div class="addBoxtop">
+            用户信息
+        </div>
+        <p>
+            <span>城市：</span>
+            <span>
+                <select class="selectcity">
+                      <option value ="城市1">城市1</option>
+                      <option value ="城市2">城市2</option>
+                      <option value ="城市3">城市3</option>
+                      <option value ="城市4">城市4</option>
+                </select>
+            </span>
+        </p>
+        <p>
+            <span>姓名：</span>
+            <span> <input type="text" name="name" onfocus="clearword()"> </span>
+        </p>
+        <p>
+            <span>所在部门：</span>
+            <span>
+                <select class="selectdepartment">
+                      <option value ="部门1">部门1</option>
+                      <option value ="部门2">部门2</option>
+                      <option value ="部门3">部门3</option>
+                      <option valu e="部门4">部门4</option>
+                </select>
+            </span>
+        </p>
+        <p>
+            <span>职务：</span>
+            <span>
+               <select class="selectposition">
+                      <option value ="职务1">职务1</option>
+                      <option value ="职务2">职务2</option>
+                      <option value ="职务3">职务3</option>
+                      <option value ="职务4">职务4</option>
+                </select>
+            </span>
+        </p>
+        <p>
+            <span>电话：</span><span><input name="telephone" type="text" onfocus="clearword()"></span>
+        </p>
+        <p>
+            <span>手机号：</span><span><input name="phone_number" type="text" onfocus="clearword()"></span>
+        </p>
+        <div class="addBox-word"></div>
+        <div class="addBoxbtn">
+            <span id="sureAdd">确定</span>
+            <span onclick="noAdd()">取消</span>
+        </div>
+    </div>
+</div>
+
+<div class="Alert delAlert">
+    <div class="AlertShaw"></div>
+    <div class="delBox">
+        <div>确定要删除么？</div>
+        <div>
+            <span onclick="sureDel()">确定</span>
+            <span onclick="noDel()">取消</span>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="./js/jquery-1.12.1.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/BusinessMaintenance.js"></script>
+</html>

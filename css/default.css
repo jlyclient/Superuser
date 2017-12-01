@@ -1,0 +1,150 @@
+body,html{
+    margin:0;
+    padding:0;
+    color: #333;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.Signout{
+    padding:15px;
+    cursor: pointer;
+}
+.InnerBox{
+    width:1200px;
+    margin:20px auto;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:focus, a:hover{
+    color: #333;
+    text-decoration: none;
+}
+.InnerBox .nav-tabs{
+    margin-bottom:20px;
+    height:41px;
+    width:100%;
+    margin-left:0px;
+}
+.InnerBox th,.InnerBox td{
+    text-align: center;
+}
+.Alert{
+    position: fixed;
+    width:100%;
+    height:100%;
+    z-index: 1031;
+    top:0;
+    left:0;
+}
+.AlertShaw{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.3);
+}
+.delBox{
+    width:300px;
+    height:140px;
+    position: absolute;
+    top:200px;
+    left:0;
+    right:0;
+    margin:auto;
+    background: #fff;
+    padding:28px;
+    font-size: 18px;
+}
+.delBox>div{
+    text-align: center;
+}
+.delBox>div:nth-of-type(1){
+    margin-bottom:22px;
+}
+.delBox>div>span{
+    display: inline-block;
+    width:80px;
+    height:28px;
+    border:1px solid #d3d3d3;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.delBox>div>span:hover{
+    background: #3172d9;
+    color: #fff;
+}
+
+.cxcalendar .acts a{
+    width:28px;
+    height:42px;
+}
+
+
+
+
+/* 新加的   2017.12.01*/
+
+body .table{
+    width:auto;
+}
+
+.InnerBox .nav-tabs{
+    margin-bottom:20px;
+    height:41px;
+    width:100%;
+    margin-left: 0;
+}
+
+
+
+
+.header{
+    height:50px;
+    background: #0074e7;
+    padding:0 15px;
+    line-height: 50px;
+    font-size: 14px;
+    /*display: flex;*/
+}
+/*ul > li{*/
+/*float: left;*/
+/*}*/
+.headerInner{
+    width:1200px;
+    margin:0 auto;
+}
+.headerInner li, .headerInner ul{
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+
+.headercenter{
+    margin-left:18px;
+}
+.headerInner li a{
+    padding:0 15px;
+    display: inline-block;
+    height:100%;
+    color: #fff;
+}
+
+.headercenter .active{
+    background: #0050a0;
+}
+
+.headerInner li .indexTab{
+    padding:0;
+}

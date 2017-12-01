@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/jquery.cxcalendar.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/BusinessMaintenance.css">
+
+</head>
+<body>
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+    <!--<div class="container-fluid">-->
+        <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+        <!--<div class="navbar-header">-->
+            <!--<a class="navbar-brand" href="#">副省级城市经济金融共享信息系统</a>-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li><a href="./BusinessMaintenance.html">信息联络员管理 </a></li>-->
+                <!--<li><a href="./StatisticalIndicators.html">统计指标管理</a></li>-->
+                <!--<li><a href="./CityManagement.html">城市管理</a></li>-->
+                <!--<li class="active"><a href="#">公告管理</a></li>-->
+                <!--<li><a href="#">统计报表格式管理</a></li>-->
+                <!--<li><a href="./BusinessDataquery.html">数据查询</a></li>-->
+            <!--</ul>-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="#">修改密码</a></li>-->
+                <!--<li><a href="#">退出</a></li>-->
+            <!--</ul>-->
+
+        <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+
+    <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+<!--</nav>-->
+
+
+
+<div class="header">
+    <div class="headerInner">
+        <ul class="left">
+            <li><a class="indexTab" href="#">副省级城市经济金融共享信息系统</a></li>
+        </ul>
+        <ul class="left headercenter">
+            <li><a href="./BusinessMaintenance.html">信息联络员管理</a></li>
+            <!-- 将这个li 标签删除 就不会出现 -->
+            <li><a href="./StatisticalIndicators.html">统计报表管理</a></li>
+
+            <li><a href="./CityManagement.html">城市管理</a></li>
+            <li class="active"><a href="./Notice.html">公告管理</a></li>
+            <!--<li><a href="./StatisticalTable.html">统计报表格式管理</a></li>-->
+            <li><a href="./BusinessDataquery.html">数据查询</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+        <p class="clear"></p>
+    </div>
+</div>
+
+
+<div class="InnerBox">
+    <!--<div>-->
+        <!--<ul class="nav nav-tabs" role="tablist">-->
+            <!--<li role="presentation" class="active"><a href="#breakfast" aria-controls="breakfast" role="tab" data-toggle="tab">公告管理</a></li>-->
+            <!--</ul>-->
+        <!--<div class="tab-content">-->
+            <!--<div role="tabpanel" class="tab-pane active" id="breakfast">-->
+                <!---->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <p class="BusinessAdd">添加公告</p>
+    <table class="table table-bordered">
+        <tr>
+            <th>序号</th>
+            <th>标题</th>
+            <th>通知对象</th>
+            <th>发布时间</th>
+            <th>结束时间</th>
+            <th>发布人</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="">成都</a></td>
+            <td>张三</td>
+            <td>2017-10-17</td>
+            <td>2017-10-27</td>
+            <td>科长</td>
+            <td>
+                <span class="BusinessDel" onclick="BusinessEdit('obj')">编辑</span>
+                <span class="BusinessDel" onclick="BusinessDel('1')">删除</span>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="Alert addAlert">
+    <div class="AlertShaw"></div>
+    <div class="addBox">
+        <div class="addBoxtop">
+            公告信息
+        </div>
+        <p>
+            <span>标题：</span>
+            <span> <input type="text" name="name" onfocus="clearword()"> </span>
+        </p>
+        <p>
+            <span>通知对象：</span>
+            <span>
+                <select class="notice">
+                      <option value ="城市1">城市1</option>
+                      <option value ="城市2">城市2</option>
+                      <option value ="城市3">城市3</option>
+                      <option value ="城市4">城市4</option>
+                </select>
+            </span>
+        </p>
+        <p>
+            <span for="date_e">结束时间：</span>
+            <span>
+                <input id="date_e" name="endtime" type="text" readonly onfocus="clearword()">
+            </span>
+        </p>
+        <p>
+            <span>公告内容：</span><span><textarea class="text_inner" onfocus="clearword()" maxlength="300" placeholder="最多可填写300字~" ></textarea></span>
+        </p>
+
+        <div class="addBox-word"></div>
+        <div class="addBoxbtn">
+            <span id="sureAdd">确定</span>
+            <span onclick="noAdd()">取消</span>
+        </div>
+    </div>
+</div>
+<div class="Alert delAlert">
+    <div class="AlertShaw"></div>
+    <div class="delBox">
+        <div>确定要删除么？</div>
+        <div>
+            <span onclick="sureDel()">确定</span>
+            <span onclick="noDel()">取消</span>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="./js/jquery-1.12.1.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.cxcalendar.min.js"></script>
+<script src="./js/Notice.js"></script>
+</html>

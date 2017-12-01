@@ -1,0 +1,9 @@
+.NoticeList{
+    width:80%;
+}
+.NoticeList h4{
+    text-align: center;
+}
+.NoticeList p{
+    line-height: 30px;
+}

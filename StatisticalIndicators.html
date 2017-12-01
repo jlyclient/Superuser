@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/BusinessMaintenance.css">
+</head>
+<body>
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+    <!--<div class="container-fluid">-->
+        <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+        <!--<div class="navbar-header">-->
+            <!--<a class="navbar-brand" href="#">副省级城市经济金融共享信息系统</a>-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li ><a href="./BusinessMaintenance.html">信息联络员管理 </a></li>-->
+                <!--<li class="active"><a href="#">统计指标管理</a></li>-->
+                <!--<li><a href="./CityManagement.html">城市管理</a></li>-->
+                <!--<li><a href="#">公告管理</a></li>-->
+                <!--<li><a href="#">统计报表格式管理</a></li>-->
+                <!--<li><a href="./BusinessDataquery.html">数据查询</a></li>-->
+            <!--</ul>-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="#">修改密码</a></li>-->
+                <!--<li><a href="#">退出</a></li>-->
+            <!--</ul>-->
+
+        <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+
+    <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+<!--</nav>-->
+
+
+<div class="header">
+    <div class="headerInner">
+        <ul class="left">
+            <li><a class="indexTab" href="#">副省级城市经济金融共享信息系统</a></li>
+        </ul>
+        <ul class="left headercenter">
+            <li><a href="./BusinessMaintenance.html">信息联络员管理</a></li>
+            <!-- 将这个li 标签删除 就不会出现 -->
+            <li class="active"><a href="./StatisticalIndicators.html">统计报表管理</a></li>
+
+            <li><a href="./CityManagement.html">城市管理</a></li>
+            <li><a href="./Notice.html">公告管理</a></li>
+            <!--<li><a href="./StatisticalTable.html">统计报表格式管理</a></li>-->
+            <li><a href="./BusinessDataquery.html">数据查询</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+        <p class="clear"></p>
+    </div>
+</div>
+
+<div class="InnerBox StatisticalIndicators BusinessMaintenance">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#breakfast" aria-controls="breakfast" role="tab" data-toggle="tab">基础表</a></li>
+            <li role="presentation"><a href="#lunch" aria-controls="lunch" role="tab" data-toggle="tab">对比分析表</a></li>
+        </ul>
+        <p class="clear"></p>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="breakfast">
+                <!--<p class="addpower-input">-->
+                    <!--名称：<input type="text"> <span id="sure-addpower">确认</span> <span id="del-adpower">取消</span>-->
+                <!--</p>-->
+                <table class="table table-bordered">
+                    <tr>
+                        <th>序号</th>
+                        <th>名称</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>地区生产总值</td>
+                    </tr>
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="lunch">
+                <!--<p class="addpower-input1">-->
+                    <!--名称：<input type="text"> <span id="sure-addfinance">确认</span> <span id="del-finance">取消</span>-->
+                <!--</p>-->
+                <table class="table table-bordered">
+                    <tr>
+                        <th>序号</th>
+                        <th>名称</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>社会融资规模</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="Alert addAlert">
+    <div class="AlertShaw"></div>
+    <div class="addBox">
+        <div class="addBoxtop">
+            用户信息
+        </div>
+        <p>
+            <span>名称：</span><span><input name="name" type="text" onfocus="clearword()"></span>
+        </p>
+        <p>
+            <span>单位：</span><span><input name="company" type="text" onfocus="clearword()"></span>
+        </p>
+        <div class="addBox-word"></div>
+        <div class="addBoxbtn">
+            <span id="sureAdd">确定</span>
+            <span onclick="noAdd()">取消</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="Alert delAlert">
+    <div class="AlertShaw"></div>
+    <div class="delBox">
+        <div>确定要删除么？</div>
+        <div>
+            <span onclick="sureDel()">确定</span>
+            <span onclick="noDel()">取消</span>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="./js/jquery-1.12.1.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/StatisticalIndicators.js"></script>
+</html>
